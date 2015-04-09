@@ -1,11 +1,10 @@
 FROM centos7
 MAINTAINER ultrix "pedro@viurdata.com"
 
-RUN cat > /etc/yum.repos.d/fiware.repo <<EOL
-[Fiware]
-name=FIWARE repository
-baseurl=http://repositories.testbed.fi-ware.eu/repo/rpm/x86_64/
-gpgcheck=0
-enabled=1
-EOL
+RUN echo "[Fiware]" >> /etc/yum.repos.d/fiware.repo
+RUN echo "name=FIWARE repository" >> /etc/yum.repos.d/fiware.repo
+RUN echo "baseurl=http://repositories.testbed.fi-ware.eu/repo/rpm/x86_64/" >> /etc/yum.repos.d/fiware.repo
+RUN echo "gpgcheck=0" >> /etc/yum.repos.d/fiware.repo
+RUN echo "enabled=1" >> /etc/yum.repos.d/fiware.repo
+
 RUN yum install cygnus
