@@ -15,6 +15,7 @@ RUN yum -y install cygnus
 ADD agent_1.conf /usr/cygnus/conf/agent_1.conf
 ADD cygnus_instance_1.conf /usr/cygnus/conf/cygnus_instance_1.conf
 ADD log4j.properties /usr/cygnus/conf/log4j.properties
+ADD matching_table.conf /usr/cygnus/conf/matching_table.conf
 
 RUN service cygnus start
 RUN service cygnus status
