@@ -7,4 +7,4 @@ RUN echo "baseurl=http://repositories.testbed.fi-ware.eu/repo/rpm/x86_64/" >> /e
 RUN echo "gpgcheck=0" >> /etc/yum.repos.d/fiware.repo
 RUN echo "enabled=1" >> /etc/yum.repos.d/fiware.repo
 
-RUN yum install cygnus
+RUN yum -y install cygnus
