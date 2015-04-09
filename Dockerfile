@@ -12,7 +12,7 @@ RUN yum -y install cygnus
 ADD agent_1.conf /usr/cygnus/conf/agent_1.conf
 ADD cygnus_instance_1.conf /usr/cygnus/conf/cygnus_instance_1.conf
 
-RUN service cygnus status
 RUN service cygnus start
+RUN service cygnus status
 
 EXPOSE 5050
