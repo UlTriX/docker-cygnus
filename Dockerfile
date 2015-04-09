@@ -1,4 +1,6 @@
 FROM centos7
+MAINTAINER ultrix "pedro@viurdata.com"
+
 RUN cat > /etc/yum.repos.d/fiware.repo <<EOL
 [Fiware]
 name=FIWARE repository
