@@ -1,4 +1,4 @@
-FROM centos7
+FROM centos:7
 MAINTAINER ultrix "pedro@viurdata.com"
 
 RUN echo "[Fiware]" >> /etc/yum.repos.d/fiware.repo
