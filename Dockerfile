@@ -8,3 +8,11 @@ RUN echo "gpgcheck=0" >> /etc/yum.repos.d/fiware.repo
 RUN echo "enabled=1" >> /etc/yum.repos.d/fiware.repo
 
 RUN yum -y install cygnus
+
+ADD agent_1.conf /usr/cygnus/conf/agent_1.conf
+ADD cygnus_instance_1.conf /usr/cygnus/conf/cygnus_instance_1.conf
+
+RUN sudo service cygnus status
+RUN sudo service cygnus start
+
+EXPOSE 5050
