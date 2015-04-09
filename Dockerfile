@@ -7,6 +7,9 @@ RUN echo "baseurl=http://repositories.testbed.fi-ware.eu/repo/rpm/x86_64/" >> /e
 RUN echo "gpgcheck=0" >> /etc/yum.repos.d/fiware.repo
 RUN echo "enabled=1" >> /etc/yum.repos.d/fiware.repo
 
+RUN yum -y install java-1.6.0-openjdk-devel
+RUN export JAVA_HOME=/usr/lib/jvm/java-1.6.0-openjdk.x86_64
+
 RUN yum -y install cygnus
 
 ADD agent_1.conf /usr/cygnus/conf/agent_1.conf
