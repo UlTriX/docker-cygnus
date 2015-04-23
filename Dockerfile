@@ -19,6 +19,5 @@ ADD matching_table.conf /usr/cygnus/conf/matching_table.conf
 ADD krb5.conf /usr/cygnus/conf/krb5.conf
 
 RUN service cygnus start
-RUN service cygnus status
 
-EXPOSE 5050
+EXPOSE 5050 8081
